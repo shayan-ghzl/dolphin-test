@@ -8,7 +8,7 @@ import { MatProgressSpinnerModule } from "@angular/material/progress-spinner";
 import { ShowPasswordDirective } from '../../shared/directives/show-password.directive';
 
 @Component({
-  selector: 'app-login',
+  selector: 'app-login-page',
   standalone: true,
   imports: [
     ReactiveFormsModule,
@@ -21,7 +21,8 @@ import { ShowPasswordDirective } from '../../shared/directives/show-password.dir
   ],
   templateUrl: './login.component.html',
   styleUrl: './login.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  // encapsulation: ViewEncapsulation.None
 })
 export class LoginComponent implements OnInit {
 
