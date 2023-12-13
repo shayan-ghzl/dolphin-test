@@ -29,12 +29,124 @@ import { ListComponent } from './components/list/list.component';
 export class CarsListComponent {
   data$ = of([
     {
-      unitIcon: '',
-      unitTitle: '',
-      status: '',
-      imei: '',
-      tags: '',
-      lastTimePoint: ''
-    }
+      unitIcon: 'one/icon.png',
+      unitTitle: 'Unit 102',
+      status: 'Connected',
+      imei: '127836945',
+      tags: 'test',
+      lastTimePoint: '15 min ago'
+    },
+    {
+      unitIcon: 'one/icon.png',
+      unitTitle: 'Unit 103',
+      status: 'Connected',
+      imei: '127836945',
+      tags: 'test',
+      lastTimePoint: '15 min ago'
+    },
+    {
+      unitIcon: 'one/icon.png',
+      unitTitle: 'Unit 104',
+      status: 'Connected',
+      imei: '127836945',
+      tags: 'test',
+      lastTimePoint: '15 min ago'
+    },
+    {
+      unitIcon: 'one/icon.png',
+      unitTitle: 'Unit 105',
+      status: 'Connected',
+      imei: '127836945',
+      tags: 'test',
+      lastTimePoint: '15 min ago'
+    },
+    {
+      unitIcon: 'one/icon.png',
+      unitTitle: 'Unit 106',
+      status: 'Connected',
+      imei: '127836945',
+      tags: 'test',
+      lastTimePoint: '15 min ago'
+    },
+    {
+      unitIcon: 'one/icon.png',
+      unitTitle: 'Unit 107',
+      status: 'Connected',
+      imei: '127836945',
+      tags: 'test',
+      lastTimePoint: '15 min ago'
+    },
+    {
+      unitIcon: 'one/icon.png',
+      unitTitle: 'Unit 108',
+      status: 'Connected',
+      imei: '127836945',
+      tags: 'test',
+      lastTimePoint: '15 min ago'
+    },
+    {
+      unitIcon: 'one/icon.png',
+      unitTitle: 'Unit 109',
+      status: 'Connected',
+      imei: '127836945',
+      tags: 'test',
+      lastTimePoint: '15 min ago'
+    },
+    {
+      unitIcon: 'one/icon.png',
+      unitTitle: 'Unit 110',
+      status: 'Connected',
+      imei: '127836945',
+      tags: 'test',
+      lastTimePoint: '15 min ago'
+    },
+    {
+      unitIcon: 'one/icon.png',
+      unitTitle: 'Unit 111',
+      status: 'Connected',
+      imei: '127836945',
+      tags: 'test',
+      lastTimePoint: '15 min ago'
+    },
+    {
+      unitIcon: 'one/icon.png',
+      unitTitle: 'Unit 112',
+      status: 'Connected',
+      imei: '127836945',
+      tags: 'test',
+      lastTimePoint: '15 min ago'
+    },
+    {
+      unitIcon: 'one/icon.png',
+      unitTitle: 'Unit 113',
+      status: 'Connected',
+      imei: '127836945',
+      tags: 'test',
+      lastTimePoint: '15 min ago'
+    },
+    {
+      unitIcon: 'one/icon.png',
+      unitTitle: 'Unit 114',
+      status: 'Connected',
+      imei: '127836945',
+      tags: 'test',
+      lastTimePoint: '15 min ago'
+    },
+    {
+      unitIcon: 'one/icon.png',
+      unitTitle: 'Unit 115',
+      status: 'Connected',
+      imei: '127836945',
+      tags: 'test',
+      lastTimePoint: '15 min ago'
+    },
+    {
+      unitIcon: 'one/icon.png',
+      unitTitle: 'Unit 116',
+      status: 'Connected',
+      imei: '127836945',
+      tags: 'test',
+      lastTimePoint: '15 min ago'
+    },
   ]);
 }

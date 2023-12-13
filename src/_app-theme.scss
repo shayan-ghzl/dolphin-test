@@ -1,7 +1,11 @@
 @use '@angular/material' as mat;
 
 @use 'sass:map';
+// has theming
 @use './app/pages/login/login-component';
+
+// has not theming
+@use './app/pages/cars-list/cars-list-component';
 
 @mixin theme($theme) {
     @include login-component.theme($theme);

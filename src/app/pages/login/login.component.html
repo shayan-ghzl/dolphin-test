@@ -15,7 +15,7 @@
             </div>
             <div>
                 <mat-label>Password</mat-label>
-                <mat-form-field class="password-field" appearance="outline" floatLabel="always">
+                <mat-form-field class="app-form-field-suffix-btn" appearance="outline" floatLabel="always">
                     <mat-icon matPrefix>lock</mat-icon>
                     <input formControlName="password" [type]="(showPass.showPassword) ? 'text' : 'password'" matInput placeholder="At least 8 symbols">
                     <button type="button" [disableRipple]="true" matSuffix mat-flat-button appShowPassword #showPass="appShowPassword">

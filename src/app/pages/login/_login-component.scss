@@ -15,10 +15,6 @@ app-login-page .page-login-container {
     }
 }
 
-app-login-page mat-form-field.password-field .mat-mdc-form-field-flex {
-    padding-right: 12px;
-}
-
 @mixin theme($theme) {
     $primary-palette: map.get($theme, primary);
     $primary: map.get($primary-palette, 500);

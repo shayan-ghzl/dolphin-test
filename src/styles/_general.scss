@@ -1,6 +1,38 @@
+// remove letter-spacing
 .mdc-button {
     --mdc-typography-button-letter-spacing: 0;
 }
 .mat-mdc-form-field {
     --mat-form-field-container-text-tracking: 0;
+}
+.mdc-tab__text-label {
+    --mat-tab-header-label-text-tracking: 0;
+}
+
+// table
+.table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: auto;
+}
+
+// fields
+mat-form-field.app-form-field-suffix-btn {
+    .mat-mdc-unelevated-button {
+        --mdc-filled-button-container-color: transparent;
+
+        >.mat-icon {
+            margin: 0;
+            --mat-icon-color: var(--gray-500);
+        }
+    }
+    .mdc-button {
+        min-width: 40px;
+    }
+    .mdc-button--unelevated {
+        padding: 0 8px 0 8px;
+    }
+    .mat-mdc-form-field-flex {
+        padding-right: 12px;
+    }
 }

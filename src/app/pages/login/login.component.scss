@@ -43,23 +43,7 @@
     }
     mat-form-field {
         width: 100%;
-        --mat-icon-color: #b7b7b7;
-
-        &.password-field {
-            .mat-mdc-unelevated-button {
-                --mdc-filled-button-container-color: transparent;
-
-                >.mat-icon {
-                    margin: 0;
-                }
-            }
-            .mdc-button {
-                min-width: 40px;
-            }
-            .mdc-button--unelevated {
-                padding: 0 8px 0 8px;
-            }
-        }
+        --mat-icon-color: var(--gray);
     }
     button[type="submit"] {
         width: 100%;

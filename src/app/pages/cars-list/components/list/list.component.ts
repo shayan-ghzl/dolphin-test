@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input, SimpleChanges, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, Input, SimpleChanges, ViewChild } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
@@ -20,20 +20,15 @@ import { MatTableDataSource, MatTableModule } from '@angular/material/table';
   templateUrl: './list.component.html',
   styleUrl: './list.component.scss'
 })
-export class ListComponent {
+export class ListComponent implements AfterViewInit {
 
-  totalRows = 100;
-	pageSize = 10;
-  tablePageSizeOption = [];
+  totalRows = 16;
+  pageSize = 5;
+  tablePageSizeOption = [5, 10];
 
   @Input({ required: true }) data: any[] | null | false = null;
 
-  @ViewChild(MatPaginator) set paginator(paginator: MatPaginator) {
-    // note that paginator is in ngif so it should be set after ngif resolved
-    if (paginator) {
-      this.dataSource.paginator = paginator;
-    }
-  }
+  @ViewChild(MatPaginator) paginator!: MatPaginator;
 
   dataSource = new MatTableDataSource();
 
@@ -51,6 +46,10 @@ export class ListComponent {
     if (changes['data'].currentValue) {
       this.dataSource.data = changes['data'].currentValue;
     }
+  }
+
+  ngAfterViewInit(): void {
+    this.dataSource.paginator = this.paginator;
   }
 
 }
