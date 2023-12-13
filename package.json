@@ -6,7 +6,8 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "generated": "generate.bat"
   },
   "private": true,
   "dependencies": {
@@ -19,6 +20,8 @@
     "@angular/platform-browser": "^17.0.0",
     "@angular/platform-browser-dynamic": "^17.0.0",
     "@angular/router": "^17.0.0",
+    "@grpc/grpc-js": "^1.9.13",
+    "@improbable-eng/grpc-web": "^0.15.0",
     "@ngx-grpc/common": "^3.1.2",
     "@ngx-grpc/core": "^3.1.2",
     "@ngx-grpc/grpc-web-client": "^3.1.2",
