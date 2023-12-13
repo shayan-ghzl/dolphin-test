@@ -89,12 +89,12 @@
 @media (max-width: 1200px) {}
 @media (min-width: 993px) {}
 @media (max-width: 992px), (orientation: portrait) {
-    app-login-page .page-login-container {
+    :host .page-login-container {
         grid-template-columns: minmax(0, 1fr);
         padding-right: 48px;
         min-height: 100vh;
     }
-    app-login-page .hero-image {
+    :host .hero-image {
         display: none;
     }
 }
