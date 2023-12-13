@@ -1,0 +1,52 @@
+<section class="page-login-container">
+    <article class="login-form">
+        <div class="article-entry">
+            <h3>Sign in</h3>
+            <span>Welcome to FMS</span>
+        </div>
+        <form [formGroup]="loginFormGrp" (ngSubmit)="submit()" autocomplete="off">
+            <div>
+                <mat-label>Email</mat-label>
+                <mat-form-field appearance="outline" floatLabel="always">
+                    <mat-icon matPrefix>person</mat-icon>
+                    <input formControlName="username" matInput placeholder="test@gmail.com">
+                    <mat-error>this field is required</mat-error>
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-label>Password</mat-label>
+                <mat-form-field class="password-field" appearance="outline" floatLabel="always">
+                    <mat-icon matPrefix>lock</mat-icon>
+                    <input formControlName="password" [type]="(showPass.showPassword) ? 'text' : 'password'" matInput placeholder="At least 8 symbols">
+                    <button type="button" [disableRipple]="true" matSuffix mat-flat-button appShowPassword #showPass="appShowPassword">
+                        @if(showPass.showPassword){
+                        <mat-icon>visibility</mat-icon>
+                        }
+                        @else{
+                        <mat-icon>visibility_off</mat-icon>
+                        }
+                    </button>
+                    <mat-error>this field is required</mat-error>
+                </mat-form-field>
+            </div>
+            <button type="submit" mat-raised-button color="primary">Login</button>
+        </form>
+        <div class="forget-password-container">
+            <button mat-flat-button>
+                Forget Password?
+            </button>
+            <button mat-flat-button>
+                تغییر به زبان فارسی
+                <mat-icon>public</mat-icon>
+            </button>
+        </div>
+        @if(loadingSpinner){
+        <div class="request-loading">
+            <mat-spinner [diameter]="42" color="primary"></mat-spinner>
+        </div>
+        }
+    </article>
+    <article class="hero-image">
+        <img src="./assets/ic_login3.png" alt="hero image">
+    </article>
+</section>
