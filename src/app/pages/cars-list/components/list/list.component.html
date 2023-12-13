@@ -1,0 +1,91 @@
+<div class="app-table-container  app-cars-list-table">
+    <ng-container *ngIf="data;else waitOrDieTemplate">
+        <ng-container *ngTemplateOutlet="data.length ? tableTemplate : emptyTableTemplate;" />
+    </ng-container>
+</div>
+
+<!-- Table Empty -->
+<ng-template #emptyTableTemplate>
+    <div class="table-empty-message">
+        <h3>نتیجه ای یافت نشد</h3>
+    </div>
+</ng-template>
+
+<!-- Table Loading -->
+<ng-template #waitOrDieTemplate>
+    <ng-container *ngIf="data === null;else emptyTableTemplate">
+        <mat-spinner [diameter]="46" color="primary" />
+    </ng-container>
+</ng-template>
+
+<!-- Table Content -->
+<ng-template #tableTemplate>
+    <div class="table-responsive">
+        <table mat-table [dataSource]="dataSource" multiTemplateDataRows class="mat-elevation-z8">
+
+            <!-- Unit Icon Column -->
+            <ng-container matColumnDef="unitIcon">
+                <th class="unit-icon-column" mat-header-cell *matHeaderCellDef>Unit Icon</th>
+                <td class="unit-icon-column" mat-cell *matCellDef="let element">
+                    {{element.unitIcon}}
+                </td>
+            </ng-container>
+
+            <!-- Unit Title Column -->
+            <ng-container matColumnDef="unitTitle">
+                <th class="unit-title-column" mat-header-cell *matHeaderCellDef>Unit Title</th>
+                <td class="unit-title-column" mat-cell *matCellDef="let element">
+                    {{element.unitTitle}}
+                </td>
+            </ng-container>
+
+            <!-- Status Column -->
+            <ng-container matColumnDef="status">
+                <th class="status-column" mat-header-cell *matHeaderCellDef>Connected Status</th>
+                <td class="status-column" mat-cell *matCellDef="let element">
+                    {{element.status}}
+                </td>
+            </ng-container>
+
+            <!-- Imei Column -->
+            <ng-container matColumnDef="imei">
+                <th class="imei-column" mat-header-cell *matHeaderCellDef>Imei</th>
+                <td class="imei-column" mat-cell *matCellDef="let element">
+                    {{element.imei}}
+                </td>
+            </ng-container>
+
+            <!-- Tags Column -->
+            <ng-container matColumnDef="tags">
+                <th class="tags-column" mat-header-cell *matHeaderCellDef>tags</th>
+                <td class="tags-column" mat-cell *matCellDef="let element">
+                    {{element.tags}}
+                </td>
+            </ng-container>
+
+            <!-- last Time Point Column -->
+            <ng-container matColumnDef="lastTimePoint">
+                <th class="last-time-point-column" mat-header-cell *matHeaderCellDef>last Time Point</th>
+                <td class="last-time-point-column" mat-cell *matCellDef="let element">
+                    {{element.lastTimePoint}}
+                </td>
+            </ng-container>
+
+            <!-- Operation Column -->
+            <ng-container matColumnDef="operation">
+                <th class="operation-column" mat-header-cell *matHeaderCellDef></th>
+                <td class="operation-column" mat-cell *matCellDef="let element">
+                    <button mat-icon-button>
+                        <mat-icon>more_vert</mat-icon>
+                    </button>
+                </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="tableColumns"></tr>
+            <tr mat-row *matRowDef="let element; columns: tableColumns;"></tr>
+        </table>
+    </div>
+
+    <!-- Table Paginator -->
+    <mat-paginator [pageSize]="pageSize" [length]="totalRows" [pageSizeOptions]="tablePageSizeOption" showFirstLastButtons />
+</ng-template>
